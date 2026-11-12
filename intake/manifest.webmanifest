@@ -1,0 +1,11 @@
+{
+  "name": "Case intake",
+  "short_name": "Case intake",
+  "description": "Private case intake for Best Legal Counsel, a referral service.",
+  "start_url": "/intake/",
+  "scope": "/intake/",
+  "display": "standalone",
+  "background_color": "#14223b",
+  "theme_color": "#14223b",
+  "lang": "en"
+}

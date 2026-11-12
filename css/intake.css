@@ -1,0 +1,105 @@
+/* Phone app shell for the private case intake. Loaded after styles.css. */
+.layout-intake{color-scheme:light;background:var(--navy);height:100vh;height:100dvh;overflow:hidden}
+.layout-intake section{padding:0}
+.layout-intake h1,.layout-intake h2{text-transform:none;letter-spacing:0;color:var(--navy)}
+.phone{width:100%;max-width:430px;height:100%;margin:0 auto;background:var(--cream);display:flex;flex-direction:column;min-height:0}
+.intake{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;background:transparent;border:0;box-shadow:none;padding:0;border-radius:0;margin:0}
+
+.app-bar{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--navy);color:var(--sand);padding:8px 12px;padding-top:calc(8px + env(safe-area-inset-top,0px));padding-left:calc(12px + env(safe-area-inset-left,0px));padding-right:calc(12px + env(safe-area-inset-right,0px))}
+.app-bar .logo{color:var(--sand);text-decoration:none;font-size:16px;min-width:0;gap:8px}
+.app-bar .mark{width:28px;height:28px;border-radius:8px;background:var(--gold);color:var(--navy);font-size:15px;flex:0 0 28px}
+.app-bar .word{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.app-bar .lang{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.08);border-radius:999px;padding:3px;flex:0 0 auto}
+.app-bar .lang a{color:var(--sand);text-decoration:none;font-weight:600;font-size:14px;min-height:44px;padding:0 12px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center}
+.app-bar .lang a[aria-current]{background:var(--sand);color:var(--navy)}
+
+.app-progress{display:none;background:var(--navy);color:var(--sand)}
+.intake.js .app-progress{display:block}
+.progress-text{margin:0;padding:2px 16px 8px;font:600 13px/1.35 Inter,system-ui,Arial,sans-serif;color:var(--sand)}
+.progress{height:3px;background:rgba(255,255,255,.18);border-radius:0;overflow:hidden;display:none}
+.progress span{display:block;height:100%;width:0;background:var(--gold);transition:width .25s}
+.intake.js .progress{display:block}
+.step-error{background:#fbeae7;color:#7a2a1f;border-radius:10px;padding:10px 12px;font-weight:600;font-size:14px;margin:8px 16px 12px}
+.step-error[hidden]{display:none !important}
+
+.app-scroll{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:18px 16px 24px;padding-left:calc(16px + env(safe-area-inset-left,0px));padding-right:calc(16px + env(safe-area-inset-right,0px))}
+.intake.js:not(.at-start) .intro{display:none}
+.intro h1{font-size:28px;line-height:1.15;margin:0 0 8px}
+.intro .lead{font-size:16px;margin:0 0 14px}
+.before{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 14px 6px;margin:0 0 16px}
+.before h2{font-size:20px;margin:0 0 8px}
+.before ul{margin:0;padding-left:18px}
+.before li{margin-bottom:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.req{color:#a03a2c;font-weight:700}
+.warn{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}
+
+.step h2{font-size:26px;margin:0 0 14px}
+.step h2:focus{outline:none}
+.step h2:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.step-num{display:block;font:700 12px Inter,system-ui,Arial,sans-serif;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.intake.js .step-num{display:none}
+.intake:not(.js) .step{border-top:1px solid var(--line);padding-top:16px;margin-top:20px}
+.intake:not(.js) .step:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.step[hidden],[data-show-if][hidden],[data-rep-block][hidden]{display:none !important}
+.sub-h{font-size:20px;color:var(--navy);margin:18px 0 6px}
+.note{font-size:14px}
+
+.field{margin-bottom:14px}
+.layout-intake label{font-size:14px;margin-bottom:6px}
+.hint{font-size:13px;color:var(--muted);margin:-2px 0 6px}
+.layout-intake input,.layout-intake textarea,.layout-intake select{font-size:16px;line-height:1.4;min-height:48px;padding:12px 14px;border:1px solid #d5cbb8;border-radius:12px;background:#fff;width:100%;max-width:100%}
+.layout-intake textarea{min-height:112px;resize:vertical}
+.layout-intake input[type=checkbox],.layout-intake input[type=radio]{width:22px;height:22px;min-height:22px;flex:0 0 22px;padding:0;border:0;accent-color:var(--navy)}
+.layout-intake input:focus-visible,.layout-intake textarea:focus-visible,.layout-intake select:focus-visible{outline:3px solid var(--gold);outline-offset:1px}
+
+.row{display:flex;flex-direction:column;gap:0}
+.time-pair{display:grid;grid-template-columns:minmax(0,1fr) 7.5rem;gap:10px;align-items:end}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend{font-weight:700;color:var(--navy);padding:0}
+fieldset.box{border:0;border-radius:0;padding:0;margin:0 0 8px;background:transparent}
+fieldset.box>legend{font-family:Inter,system-ui,Arial,sans-serif;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:0;margin:8px 0}
+fieldset.group{margin:0 0 16px}
+fieldset.group>legend{font-size:15px;margin-bottom:8px;text-transform:none;letter-spacing:0;color:var(--navy);font-family:"Source Serif 4",Georgia,serif}
+
+.checks{display:flex;flex-direction:column;gap:8px}
+label.check{display:flex;align-items:center;gap:12px;min-height:48px;width:100%;margin:0;padding:12px;background:#fff;border:1px solid var(--line);border-radius:12px;font-weight:600;font-size:16px;line-height:1.35;cursor:pointer}
+label.check:has(input:checked){border-color:var(--gold);background:#fbf7f0}
+.inj{border:1px solid var(--line);border-radius:14px;background:#fff;padding:12px 12px 4px;margin:0 0 12px}
+.inj>legend{font-family:"Source Serif 4",Georgia,serif;font-size:18px;text-transform:none;letter-spacing:0;color:var(--navy);padding:0;margin-bottom:8px}
+.syms{display:flex;flex-direction:column;gap:8px}
+.sym{display:flex;flex-direction:column;gap:8px}
+.sym .sub{font-size:15px;color:var(--text)}
+
+.rep-block{position:relative}
+.add-btn{width:100%;min-height:48px;margin:4px 0 16px;border-style:dashed}
+.link-btn{display:inline-flex;align-items:center;min-height:44px;padding:8px 2px;margin:0 0 8px;background:none;border:0;color:#8a3a2c;text-decoration:underline;font:600 15px Inter,system-ui,Arial,sans-serif;cursor:pointer}
+.field-error{color:#a03a2c;font-size:14px;font-weight:600;margin:4px 0 0}
+[aria-invalid=true]{border-color:#a03a2c;box-shadow:0 0 0 1px #a03a2c}
+.ack{margin-top:8px}
+.ack label.check{align-items:flex-start}
+.ack input{margin-top:2px}
+
+.step-nav{flex:0 0 auto;background:#fff;border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(20,34,59,.06);padding:8px 12px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));padding-left:calc(12px + env(safe-area-inset-left,0px));padding-right:calc(12px + env(safe-area-inset-right,0px))}
+.preview-note{margin:0 0 8px;text-align:center}
+#form-status:empty{display:none;margin:0}
+#form-status:not(:empty){display:block;background:var(--sand);color:var(--navy);border-radius:10px;padding:10px 12px;margin:0 0 8px;font-weight:600}
+.step-actions{display:flex;gap:10px}
+.layout-intake .step-actions .btn{flex:1 1 0;min-height:48px;display:inline-flex;align-items:center;justify-content:center;text-align:center;border-radius:14px;font-size:16px;padding:12px 16px;touch-action:manipulation}
+.layout-intake .btn.ghost{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+.layout-intake .btn.ghost:hover{background:var(--sand);color:var(--navy)}
+.layout-intake .btn:active{transform:translateY(1px)}
+.btn[disabled]{opacity:.55;cursor:not-allowed}
+.step-nav [hidden],.add-btn[hidden],.btn[hidden]{display:none !important}
+
+.layout-intake footer{background:transparent;color:var(--muted);padding:22px 0 4px;font-size:13px;line-height:1.5}
+.layout-intake footer .wrap{max-width:none;padding:0}
+.layout-intake footer .logo{color:var(--navy);font-size:16px}
+.layout-intake footer .mark{width:26px;height:26px;font-size:14px}
+.layout-intake footer a{color:var(--navy)}
+.layout-intake .disclaimer{max-width:none}
+
+@media(min-width:560px){
+ body.layout-intake{padding:28px 16px}
+ .phone{height:calc(100dvh - 56px);border-radius:28px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.38);border:1px solid rgba(255,255,255,.14)}
+}

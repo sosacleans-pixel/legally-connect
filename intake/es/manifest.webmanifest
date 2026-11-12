@@ -1,0 +1,11 @@
+{
+  "name": "Formulario de caso",
+  "short_name": "Formulario de caso",
+  "description": "Formulario privado de caso de Best Legal Counsel, un servicio de referidos.",
+  "start_url": "/intake/es/",
+  "scope": "/intake/",
+  "display": "standalone",
+  "background_color": "#14223b",
+  "theme_color": "#14223b",
+  "lang": "es"
+}

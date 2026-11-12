@@ -1,0 +1,3 @@
+document.querySelectorAll('form[data-preview]').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var s=f.querySelector('[role=status]');if(s)s.textContent=f.getAttribute('data-preview');});});
+var mb=document.getElementById('matchbar');if(mb)mb.addEventListener('submit',function(e){e.preventDefault();var c=document.getElementById('city'),l=document.getElementById('loc');if(c&&l&&l.value)c.value=l.value;document.getElementById('contacto').scrollIntoView();var n=document.getElementById('name');if(n)n.focus({preventScroll:true});});
+document.querySelectorAll('[data-loc]').forEach(function(a){a.addEventListener('click',function(){var c=document.getElementById('city');if(c)c.value=a.getAttribute('data-loc');});});

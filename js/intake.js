@@ -1,4 +1,4 @@
-/* Best Legal Counsel case intake. Preview only: nothing is ever sent over the network. */
+/* Legally Connect case intake. Preview only: nothing is ever sent over the network. */
 (function(){
 var f=document.getElementById('intake');if(!f)return;
 var D=f.dataset,steps=[].slice.call(f.querySelectorAll('.step')),T=steps.length,cur=0;
@@ -35,10 +35,16 @@ function clearErr(scope){
  });
 }
 function validate(s){
- clearErr(s);var bad=[];
+ clearErr(s);var bad=[];var seenRadio={};
  s.querySelectorAll('[required]').forEach(function(el){
   if(el.closest('[data-show-if][hidden],[data-rep-block][hidden]'))return;
-  var empty=el.type==='checkbox'?!el.checked:!el.value.trim();
+  if(el.type==='radio'){
+   if(seenRadio[el.name])return;
+   seenRadio[el.name]=true;
+   if(!s.querySelector('input[type="radio"][name="'+el.name+'"]:checked')){setErr(el,D.errRequired);bad.push(el);}
+   return;
+  }
+  var empty=el.type==='checkbox'?!el.checked:!String(el.value||'').trim();
   if(empty){setErr(el,D.errRequired);bad.push(el);}
   else if(el.type==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim())){setErr(el,D.errEmail);bad.push(el);}
  });
@@ -83,6 +89,15 @@ f.querySelectorAll('[data-repeat]').forEach(function(r){
  add.addEventListener('click',function(){var nx=blocks.filter(function(b){return b.hidden;})[0];if(nx){nx.hidden=false;var first=nx.querySelector('input');if(first)first.focus();}refresh();});
  refresh();
 });
+
+try{
+ var params=new URLSearchParams(window.location.search);
+ var city=params.get('city');
+ if(city){
+  var cityEl=f.querySelector('[name="incident_city"]');
+  if(cityEl&&!cityEl.value)cityEl.value=city;
+ }
+}catch(err){}
 
 show(0,false);
 })();

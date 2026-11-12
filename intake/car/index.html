@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14223b">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Car accident intake for Legally Connect, a referral service in Utah. This draft form does not send information.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Car intake">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Car accident intake | Legally Connect</title>
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap">
+<link rel="stylesheet" href="../../css/styles.css">
+<link rel="stylesheet" href="../../css/intake.css">
+</head>
+<body class="layout-intake">
+<a class="skip" href="#main">Skip to content</a>
+<div class="phone">
+<header class="app-bar">
+<a class="logo" href="../../"><span class="mark" aria-hidden="true">LC</span><span class="word">Legally Connect</span></a>
+<div class="lang"><a href="./" lang="en" aria-current="page">English</a><a href="es/" lang="es">Español</a></div>
+</header>
+<form id="intake" class="intake" novalidate autocomplete="on"
+ data-preview="Thank you. This is a preview, so nothing was sent." data-progress="Step {n} of {t}" data-titles="About you|The incident|Injuries and treatment|Insurance|About the crash|Review"
+ data-err-required="This field is required." data-err-email="Please enter a valid email address." data-err-phone="Please enter at least one phone number." data-err-step="Please fix the highlighted fields before you continue."
+ data-add="Add another" data-remove="Remove this entry">
+<input type="hidden" name="case_type" value="car">
+<input type="hidden" name="form_language" value="en">
+<div class="app-progress">
+<p class="progress-text" id="progress-text" aria-live="polite"></p>
+<div class="progress" aria-hidden="true"><span></span></div>
+<p class="step-error" role="alert" hidden></p>
+</div>
+<main class="app-scroll" id="main" tabindex="-1">
+<div class="intro">
+<p class="note"><a href="../">All case types</a></p>
+<h1>Car accident intake</h1>
+<p class="lead">Legally Connect is a referral service, not a law firm. This car accident form collects a few details so we can connect you with an independent attorney. Fill in what you know. It is fine to leave blanks.</p>
+<div class="before"><h2>Before you start</h2><ul><li>Fields marked with * are required. Everything else is optional.</li><li>If you are filling this out for someone else, answer for the person who was hurt.</li><li>This form never asks for a Social Security number. Please do not type one anywhere on this form.</li><li>This form does not ask you to upload medical records, sign a contract, or give a signature.</li><li>Sending this form does not create an attorney-client relationship. This is a draft, and the form does not send yet.</li></ul></div>
+<noscript><p class="note warn">This form works best with JavaScript turned on. Without it, all sections show on one page and the send button stays off.</p></noscript>
+</div>
+<section class="step" data-step="1" aria-labelledby="step1-h"><h2 id="step1-h" tabindex="-1"><span class="step-num">Step 1 of 6</span> About you</h2><div class="field"><label for="full_name">Full name <span class="req" aria-hidden="true">*</span><span class="sr"> required</span></label><input id="full_name" name="full_name" type="text" autocomplete="name" required aria-required="true"></div><div class="field"><label for="phone">Phone <span class="req" aria-hidden="true">*</span><span class="sr"> required</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-required="true"></div><div class="field"><label for="email">Email <span class="req" aria-hidden="true">*</span><span class="sr"> required</span></label><input id="email" name="email" type="email" autocomplete="email" required aria-required="true"></div><fieldset class="group"><legend>Preferred language <span class="req" aria-hidden="true">*</span><span class="sr"> required</span></legend><div class="checks"><label class="check" for="preferred_language-en"><input type="radio" id="preferred_language-en" name="preferred_language" value="en" required aria-required="true"><span>English</span></label><label class="check" for="preferred_language-es"><input type="radio" id="preferred_language-es" name="preferred_language" value="es"><span>Spanish</span></label><label class="check" for="preferred_language-either"><input type="radio" id="preferred_language-either" name="preferred_language" value="either"><span>Either is fine</span></label></div></fieldset></section>
+<section class="step" data-step="2" aria-labelledby="step2-h"><h2 id="step2-h" tabindex="-1"><span class="step-num">Step 2 of 6</span> The incident</h2><div class="field"><label for="incident_date">Date of the incident</label><input id="incident_date" name="incident_date" type="date"></div><div class="field"><label for="incident_city">City</label><p class="hint" id="incident_city-hint">City in Utah, if you know it.</p><input id="incident_city" name="incident_city" type="text" autocomplete="address-level2" aria-describedby="incident_city-hint"></div><div class="field"><label for="incident_location">Location</label><p class="hint" id="incident_location-hint">Street, cross street, business, or other place name.</p><input id="incident_location" name="incident_location" type="text" aria-describedby="incident_location-hint"></div><div class="field"><label for="description">What happened?</label><textarea id="description" name="description" rows="5"></textarea></div></section>
+<section class="step" data-step="3" aria-labelledby="step3-h"><h2 id="step3-h" tabindex="-1"><span class="step-num">Step 3 of 6</span> Injuries and treatment</h2><div class="field"><label for="injuries">Injuries</label><p class="hint" id="injuries-hint">Describe the injuries in your own words. Write none yet if that is the case.</p><textarea id="injuries" name="injuries" rows="4" aria-describedby="injuries-hint"></textarea></div><div class="field"><label for="treatment">Medical treatment</label><p class="hint" id="treatment-hint">Where you have been treated, and what care you received. It is fine to write that you have not been treated yet.</p><textarea id="treatment" name="treatment" rows="4" aria-describedby="treatment-hint"></textarea></div><fieldset class="group"><legend>Are you still receiving medical care?</legend><div class="checks"><label class="check" for="still_treating-yes"><input type="radio" id="still_treating-yes" name="still_treating" value="yes"><span>Yes</span></label><label class="check" for="still_treating-no"><input type="radio" id="still_treating-no" name="still_treating" value="no"><span>No</span></label><label class="check" for="still_treating-not_yet"><input type="radio" id="still_treating-not_yet" name="still_treating" value="not_yet"><span>Not yet</span></label></div></fieldset></section>
+<section class="step" data-step="4" aria-labelledby="step4-h"><h2 id="step4-h" tabindex="-1"><span class="step-num">Step 4 of 6</span> Insurance</h2><fieldset class="group"><legend>Has an insurance company contacted you, or have you contacted one?</legend><div class="checks"><label class="check" for="insurance_contact-yes"><input type="radio" id="insurance_contact-yes" name="insurance_contact" value="yes"><span>Yes</span></label><label class="check" for="insurance_contact-no"><input type="radio" id="insurance_contact-no" name="insurance_contact" value="no"><span>No</span></label><label class="check" for="insurance_contact-not_sure"><input type="radio" id="insurance_contact-not_sure" name="insurance_contact" value="not_sure"><span>Not sure</span></label></div></fieldset><div class="field"><label for="insurance_companies">Insurance company names</label><p class="hint" id="insurance_companies-hint">List any companies you know. Leave this blank if you do not know.</p><textarea id="insurance_companies" name="insurance_companies" rows="3" aria-describedby="insurance_companies-hint"></textarea></div><div class="field"><label for="claim_number">Claim number</label><p class="hint" id="claim_number-hint">Only if you already have one. Do not enter a Social Security number.</p><input id="claim_number" name="claim_number" type="text" aria-describedby="claim_number-hint"></div><fieldset class="group"><legend>Do you have health insurance?</legend><div class="checks"><label class="check" for="health_insurance-yes"><input type="radio" id="health_insurance-yes" name="health_insurance" value="yes"><span>Yes</span></label><label class="check" for="health_insurance-no"><input type="radio" id="health_insurance-no" name="health_insurance" value="no"><span>No</span></label><label class="check" for="health_insurance-not_sure"><input type="radio" id="health_insurance-not_sure" name="health_insurance" value="not_sure"><span>Not sure</span></label></div></fieldset></section>
+<section class="step" data-step="5" aria-labelledby="step5-h"><h2 id="step5-h" tabindex="-1"><span class="step-num">Step 5 of 6</span> About the crash</h2><fieldset class="group"><legend>What was your role?</legend><div class="checks"><label class="check" for="role-driver"><input type="radio" id="role-driver" name="role" value="driver"><span>Driver</span></label><label class="check" for="role-passenger"><input type="radio" id="role-passenger" name="role" value="passenger"><span>Passenger</span></label><label class="check" for="role-pedestrian"><input type="radio" id="role-pedestrian" name="role" value="pedestrian"><span>Pedestrian</span></label><label class="check" for="role-cyclist"><input type="radio" id="role-cyclist" name="role" value="cyclist"><span>Cyclist</span></label></div></fieldset><fieldset class="group"><legend>Was a police report made?</legend><div class="checks"><label class="check" for="police_report-yes"><input type="radio" id="police_report-yes" name="police_report" value="yes"><span>Yes</span></label><label class="check" for="police_report-no"><input type="radio" id="police_report-no" name="police_report" value="no"><span>No</span></label><label class="check" for="police_report-not_sure"><input type="radio" id="police_report-not_sure" name="police_report" value="not_sure"><span>Not sure</span></label></div></fieldset><fieldset class="group"><legend>Was the other driver insured?</legend><div class="checks"><label class="check" for="other_driver_insured-yes"><input type="radio" id="other_driver_insured-yes" name="other_driver_insured" value="yes"><span>Yes</span></label><label class="check" for="other_driver_insured-no"><input type="radio" id="other_driver_insured-no" name="other_driver_insured" value="no"><span>No</span></label><label class="check" for="other_driver_insured-not_sure"><input type="radio" id="other_driver_insured-not_sure" name="other_driver_insured" value="not_sure"><span>Not sure</span></label></div></fieldset><fieldset class="group"><legend>Do you have photos of the vehicle damage?</legend><div class="checks"><label class="check" for="vehicle_photos-yes"><input type="radio" id="vehicle_photos-yes" name="vehicle_photos" value="yes"><span>Yes</span></label><label class="check" for="vehicle_photos-no"><input type="radio" id="vehicle_photos-no" name="vehicle_photos" value="no"><span>No</span></label></div></fieldset></section>
+<section class="step" data-step="6" aria-labelledby="step6-h"><h2 id="step6-h" tabindex="-1"><span class="step-num">Step 6 of 6</span> Review</h2><div class="field"><label for="notes">Anything else we should know?</label><textarea id="notes" name="notes" rows="4"></textarea></div><div class="field ack"><label class="check" for="ack"><input type="checkbox" id="ack" name="ack" value="yes" required aria-required="true"><span>I understand that Legally Connect is a referral service, not a law firm, and that sending this form does not create an attorney-client relationship. <span class="req" aria-hidden="true">*</span></span></label></div></section>
+<footer class="app-foot"><div class="wrap"><a class="logo" href="../../"><span class="mark" aria-hidden="true">LC</span>Legally Connect</a>
+<p>Questions about this form? WhatsApp us at <a href="https://wa.me/13854906607?text=Hi%2C%20I%20have%20a%20question%20about%20the%20intake%20form." target="_blank" rel="noopener">(385) 490-6607</a>.</p>
+<p class="disclaimer">Legally Connect is a referral service, not a law firm, and does not provide legal advice. Contacting us does not create an attorney-client relationship. We connect people with independent attorneys, and hiring an attorney is always your choice. Legal deadlines depend on the facts of each case, so speak with an attorney about your situation.</p><p>© 2026 Legally Connect</p></div></footer>
+</main>
+<div class="step-nav">
+<p id="form-status" role="status" aria-live="polite"></p>
+<p class="note center preview-note">Preview only: this form does not send yet.</p>
+<div class="step-actions">
+<button type="button" class="btn ghost" data-back hidden>Back</button>
+<button type="button" class="btn" data-next hidden>Continue</button>
+<button type="submit" class="btn" data-submit disabled>Submit</button>
+</div>
+</div>
+</form>
+</div>
+<script src="../../js/intake.js"></script>
+</body>
+</html>

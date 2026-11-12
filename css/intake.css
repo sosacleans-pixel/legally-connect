@@ -7,7 +7,7 @@
 
 .app-bar{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--navy);color:var(--sand);padding:8px 12px;padding-top:calc(8px + env(safe-area-inset-top,0px));padding-left:calc(12px + env(safe-area-inset-left,0px));padding-right:calc(12px + env(safe-area-inset-right,0px))}
 .app-bar .logo{color:var(--sand);text-decoration:none;font-size:16px;min-width:0;gap:8px}
-.app-bar .mark{width:28px;height:28px;border-radius:8px;background:var(--gold);color:var(--navy);font-size:15px;flex:0 0 28px}
+.app-bar .mark{width:32px;min-width:32px;height:28px;padding:0;border-radius:8px;background:var(--gold);color:var(--navy);font-size:11px;letter-spacing:.02em;flex:0 0 32px}
 .app-bar .word{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .app-bar .lang{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,.08);border-radius:999px;padding:3px;flex:0 0 auto}
 .app-bar .lang a{color:var(--sand);text-decoration:none;font-weight:600;font-size:14px;min-height:44px;padding:0 12px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center}
@@ -95,9 +95,14 @@ label.check:has(input:checked){border-color:var(--gold);background:#fbf7f0}
 .layout-intake footer{background:transparent;color:var(--muted);padding:22px 0 4px;font-size:13px;line-height:1.5}
 .layout-intake footer .wrap{max-width:none;padding:0}
 .layout-intake footer .logo{color:var(--navy);font-size:16px}
-.layout-intake footer .mark{width:26px;height:26px;font-size:14px}
+.layout-intake footer .mark{width:32px;min-width:32px;height:26px;padding:0;font-size:11px}
 .layout-intake footer a{color:var(--navy)}
 .layout-intake .disclaimer{max-width:none}
+.choose{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.choose li{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 16px 14px}
+.choose h2{font-size:22px;margin:0 0 6px}
+.choose p{margin:0 0 12px;color:var(--muted);font-size:15px}
+.choose .btn{width:100%;text-align:center}
 
 @media(min-width:560px){
  body.layout-intake{padding:28px 16px}

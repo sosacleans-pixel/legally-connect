@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14223b">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Formulario de accidente de camión y motocicleta de Legally Connect, un servicio de referidos en Utah. Este borrador no envía información.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Camión y moto">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Accidente de camión y motocicleta | Legally Connect</title>
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../../es/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap">
+<link rel="stylesheet" href="../../../css/styles.css">
+<link rel="stylesheet" href="../../../css/intake.css">
+</head>
+<body class="layout-intake">
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="phone">
+<header class="app-bar">
+<a class="logo" href="../../../es/"><span class="mark" aria-hidden="true">LC</span><span class="word">Legally Connect</span></a>
+<div class="lang"><a href="../" lang="en">English</a><a href="./" lang="es" aria-current="page">Español</a></div>
+</header>
+<form id="intake" class="intake" novalidate autocomplete="on"
+ data-preview="Gracias. Esta es una versión preliminar, así que no se envió nada." data-progress="Paso {n} de {t}" data-titles="Sobre usted|El incidente|Lesiones y tratamiento|Seguros|Sobre el vehículo|Revisión"
+ data-err-required="Este campo es obligatorio." data-err-email="Escriba un correo electrónico válido." data-err-phone="Escriba al menos un número de teléfono." data-err-step="Por favor corrija los campos marcados antes de continuar."
+ data-add="Agregar otro" data-remove="Quitar este registro">
+<input type="hidden" name="case_type" value="truck-motorcycle">
+<input type="hidden" name="form_language" value="es">
+<div class="app-progress">
+<p class="progress-text" id="progress-text" aria-live="polite"></p>
+<div class="progress" aria-hidden="true"><span></span></div>
+<p class="step-error" role="alert" hidden></p>
+</div>
+<main class="app-scroll" id="main" tabindex="-1">
+<div class="intro">
+<p class="note"><a href="../../es/">Todos los tipos de caso</a></p>
+<h1>Accidente de camión y motocicleta</h1>
+<p class="lead">Legally Connect es un servicio de referidos, no un bufete de abogados. Este formulario de camión y motocicleta reúne algunos datos para conectarle con un abogado independiente. Llene lo que sepa. Está bien dejar espacios en blanco.</p>
+<div class="before"><h2>Antes de empezar</h2><ul><li>Los campos marcados con * son obligatorios. Todo lo demás es opcional.</li><li>Si llena este formulario por otra persona, responda por la persona que se lesionó.</li><li>Este formulario nunca pide un número de Seguro Social. Por favor no escriba uno en ninguna parte del formulario.</li><li>Este formulario no pide expedientes médicos, un contrato ni una firma.</li><li>Enviar este formulario no crea una relación abogado-cliente. Es un borrador y todavía no envía información.</li></ul></div>
+<noscript><p class="note warn">Este formulario funciona mejor con JavaScript activado. Sin JavaScript, todas las secciones aparecen en una sola página y el botón de enviar queda desactivado.</p></noscript>
+</div>
+<section class="step" data-step="1" aria-labelledby="step1-h"><h2 id="step1-h" tabindex="-1"><span class="step-num">Paso 1 de 6</span> Sobre usted</h2><div class="field"><label for="full_name">Nombre completo <span class="req" aria-hidden="true">*</span><span class="sr"> obligatorio</span></label><input id="full_name" name="full_name" type="text" autocomplete="name" required aria-required="true"></div><div class="field"><label for="phone">Teléfono <span class="req" aria-hidden="true">*</span><span class="sr"> obligatorio</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-required="true"></div><div class="field"><label for="email">Correo electrónico <span class="req" aria-hidden="true">*</span><span class="sr"> obligatorio</span></label><input id="email" name="email" type="email" autocomplete="email" required aria-required="true"></div><fieldset class="group"><legend>Idioma de preferencia <span class="req" aria-hidden="true">*</span><span class="sr"> obligatorio</span></legend><div class="checks"><label class="check" for="preferred_language-en"><input type="radio" id="preferred_language-en" name="preferred_language" value="en" required aria-required="true"><span>Inglés</span></label><label class="check" for="preferred_language-es"><input type="radio" id="preferred_language-es" name="preferred_language" value="es"><span>Español</span></label><label class="check" for="preferred_language-either"><input type="radio" id="preferred_language-either" name="preferred_language" value="either"><span>Cualquiera está bien</span></label></div></fieldset></section>
+<section class="step" data-step="2" aria-labelledby="step2-h"><h2 id="step2-h" tabindex="-1"><span class="step-num">Paso 2 de 6</span> El incidente</h2><div class="field"><label for="incident_date">Fecha del incidente</label><input id="incident_date" name="incident_date" type="date"></div><div class="field"><label for="incident_city">Ciudad</label><p class="hint" id="incident_city-hint">Ciudad en Utah, si la sabe.</p><input id="incident_city" name="incident_city" type="text" autocomplete="address-level2" aria-describedby="incident_city-hint"></div><div class="field"><label for="incident_location">Lugar</label><p class="hint" id="incident_location-hint">Calle, cruce, negocio u otro nombre del lugar.</p><input id="incident_location" name="incident_location" type="text" aria-describedby="incident_location-hint"></div><div class="field"><label for="description">¿Qué pasó?</label><textarea id="description" name="description" rows="5"></textarea></div></section>
+<section class="step" data-step="3" aria-labelledby="step3-h"><h2 id="step3-h" tabindex="-1"><span class="step-num">Paso 3 de 6</span> Lesiones y tratamiento</h2><div class="field"><label for="injuries">Lesiones</label><p class="hint" id="injuries-hint">Describa las lesiones con sus propias palabras. Escriba que todavía no hay si ese es el caso.</p><textarea id="injuries" name="injuries" rows="4" aria-describedby="injuries-hint"></textarea></div><div class="field"><label for="treatment">Tratamiento médico</label><p class="hint" id="treatment-hint">Dónde le han atendido y qué atención recibió. Está bien escribir que todavía no ha recibido tratamiento.</p><textarea id="treatment" name="treatment" rows="4" aria-describedby="treatment-hint"></textarea></div><fieldset class="group"><legend>¿Sigue recibiendo atención médica?</legend><div class="checks"><label class="check" for="still_treating-yes"><input type="radio" id="still_treating-yes" name="still_treating" value="yes"><span>Sí</span></label><label class="check" for="still_treating-no"><input type="radio" id="still_treating-no" name="still_treating" value="no"><span>No</span></label><label class="check" for="still_treating-not_yet"><input type="radio" id="still_treating-not_yet" name="still_treating" value="not_yet"><span>Todavía no</span></label></div></fieldset></section>
+<section class="step" data-step="4" aria-labelledby="step4-h"><h2 id="step4-h" tabindex="-1"><span class="step-num">Paso 4 de 6</span> Seguros</h2><fieldset class="group"><legend>¿Alguna aseguradora se ha comunicado con usted, o usted se comunicó con alguna?</legend><div class="checks"><label class="check" for="insurance_contact-yes"><input type="radio" id="insurance_contact-yes" name="insurance_contact" value="yes"><span>Sí</span></label><label class="check" for="insurance_contact-no"><input type="radio" id="insurance_contact-no" name="insurance_contact" value="no"><span>No</span></label><label class="check" for="insurance_contact-not_sure"><input type="radio" id="insurance_contact-not_sure" name="insurance_contact" value="not_sure"><span>No lo sé</span></label></div></fieldset><div class="field"><label for="insurance_companies">Nombres de las aseguradoras</label><p class="hint" id="insurance_companies-hint">Escriba las compañías que conozca. Déjelo en blanco si no las sabe.</p><textarea id="insurance_companies" name="insurance_companies" rows="3" aria-describedby="insurance_companies-hint"></textarea></div><div class="field"><label for="claim_number">Número de reclamo</label><p class="hint" id="claim_number-hint">Solo si ya tiene uno. No escriba un número de Seguro Social.</p><input id="claim_number" name="claim_number" type="text" aria-describedby="claim_number-hint"></div><fieldset class="group"><legend>¿Tiene seguro médico?</legend><div class="checks"><label class="check" for="health_insurance-yes"><input type="radio" id="health_insurance-yes" name="health_insurance" value="yes"><span>Sí</span></label><label class="check" for="health_insurance-no"><input type="radio" id="health_insurance-no" name="health_insurance" value="no"><span>No</span></label><label class="check" for="health_insurance-not_sure"><input type="radio" id="health_insurance-not_sure" name="health_insurance" value="not_sure"><span>No lo sé</span></label></div></fieldset></section>
+<section class="step" data-step="5" aria-labelledby="step5-h"><h2 id="step5-h" tabindex="-1"><span class="step-num">Paso 5 de 6</span> Sobre el vehículo</h2><fieldset class="group"><legend>¿Qué tipo de vehículo estuvo involucrado?</legend><div class="checks"><label class="check" for="vehicle_type-truck"><input type="radio" id="vehicle_type-truck" name="vehicle_type" value="truck"><span>Camión comercial</span></label><label class="check" for="vehicle_type-motorcycle"><input type="radio" id="vehicle_type-motorcycle" name="vehicle_type" value="motorcycle"><span>Motocicleta</span></label><label class="check" for="vehicle_type-both"><input type="radio" id="vehicle_type-both" name="vehicle_type" value="both"><span>Ambos</span></label><label class="check" for="vehicle_type-other"><input type="radio" id="vehicle_type-other" name="vehicle_type" value="other"><span>Otro</span></label></div></fieldset><div class="field"><label for="truck_company">Nombre de la compañía del camión comercial</label><p class="hint" id="truck_company-hint">Si lo sabe. Déjelo en blanco si no lo sabe.</p><input id="truck_company" name="truck_company" type="text" aria-describedby="truck_company-hint"></div><fieldset class="group"><legend>Si hubo una motocicleta, ¿se usó casco?</legend><div class="checks"><label class="check" for="helmet-yes"><input type="radio" id="helmet-yes" name="helmet" value="yes"><span>Sí</span></label><label class="check" for="helmet-no"><input type="radio" id="helmet-no" name="helmet" value="no"><span>No</span></label><label class="check" for="helmet-not_motorcycle"><input type="radio" id="helmet-not_motorcycle" name="helmet" value="not_motorcycle"><span>No fue una motocicleta</span></label><label class="check" for="helmet-not_sure"><input type="radio" id="helmet-not_sure" name="helmet" value="not_sure"><span>No lo sé</span></label></div></fieldset></section>
+<section class="step" data-step="6" aria-labelledby="step6-h"><h2 id="step6-h" tabindex="-1"><span class="step-num">Paso 6 de 6</span> Revisión</h2><div class="field"><label for="notes">¿Algo más que debamos saber?</label><textarea id="notes" name="notes" rows="4"></textarea></div><div class="field ack"><label class="check" for="ack"><input type="checkbox" id="ack" name="ack" value="yes" required aria-required="true"><span>Entiendo que Legally Connect es un servicio de referidos, no un bufete de abogados, y que enviar este formulario no crea una relación abogado-cliente. <span class="req" aria-hidden="true">*</span></span></label></div></section>
+<footer class="app-foot"><div class="wrap"><a class="logo" href="../../../es/"><span class="mark" aria-hidden="true">LC</span>Legally Connect</a>
+<p>¿Preguntas sobre este formulario? Escríbanos por WhatsApp al <a href="https://wa.me/13854906607?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20el%20formulario%20del%20caso." target="_blank" rel="noopener">(385) 490-6607</a>.</p>
+<p class="disclaimer">Legally Connect es un servicio de referidos, no un bufete de abogados, y no ofrece asesoría legal. Comunicarse con nosotros no crea una relación abogado-cliente. Conectamos a las personas con abogados independientes, y contratar a un abogado siempre es su decisión. Los plazos legales dependen de los hechos de cada caso, así que hable con un abogado sobre su situación.</p><p>© 2026 Legally Connect</p></div></footer>
+</main>
+<div class="step-nav">
+<p id="form-status" role="status" aria-live="polite"></p>
+<p class="note center preview-note">Versión preliminar: este formulario todavía no envía información.</p>
+<div class="step-actions">
+<button type="button" class="btn ghost" data-back hidden>Atrás</button>
+<button type="button" class="btn" data-next hidden>Continuar</button>
+<button type="submit" class="btn" data-submit disabled>Enviar</button>
+</div>
+</div>
+</form>
+</div>
+<script src="../../../js/intake.js"></script>
+</body>
+</html>
